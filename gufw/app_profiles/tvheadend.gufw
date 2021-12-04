@@ -1,0 +1,6 @@
+[tvheadend]
+title=Tvheadend
+description=TV streaming server and digital video recorder
+ports=9981/tcp|9982/tcp
+categories=Media;Multimedia;Network;Streaming;TV;
+reference=[https://tvheadend.org/projects/tvheadend/wiki/Install_and_initial_setup Tvheadend Guide: Required Ports for Tvheadend]

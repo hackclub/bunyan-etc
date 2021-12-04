@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Zeitgeist Datahub
+Comment=Start the Zeitgeist Datahub for passive loggers
+Exec=zeitgeist-datahub
+Terminal=false
+Type=Application

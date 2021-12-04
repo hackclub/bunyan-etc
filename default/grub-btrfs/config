@@ -1,0 +1,131 @@
+#!/usr/bin/env bash
+
+# Disable grub-btrfs.
+# Default: "false"
+#GRUB_BTRFS_DISABLE="true"
+
+# Name appearing in the Grub menu.
+# Default: "Use distribution information from /etc/os-release."
+#GRUB_BTRFS_SUBMENUNAME="Arch Linux snapshots"
+
+# Add a name ahead your snapshots entries in the Grub menu.
+# Default: "Snapshot:"
+#GRUB_BTRFS_PREFIXENTRY="Snapshot:"
+
+# Show full path snapshot or only name in the Grub menu, weird reaction with snapper.
+# Default: "true"
+#GRUB_BTRFS_DISPLAY_PATH_SNAPSHOT="false"
+
+# Custom title.
+# shows/hides p"prefix" d"date" n"name" in the Grub menu, separator "/", custom order available.
+# Default: "p/d/n"
+#GRUB_BTRFS_TITLE_FORMAT="p/d/n"
+
+# Limit the number of snapshots populated in the GRUB menu.
+# Default: "50"
+#GRUB_BTRFS_LIMIT="50"
+
+# Sort the found subvolumes by "ogeneration" or "generation" or "path" or "rootid".
+# # See Sorting section to https://btrfs.wiki.kernel.org/index.php/Manpage/btrfs-subvolume#SUBCOMMAND
+# "-rootid" means list snapshot by new ones first.
+# Default: "-rootid"
+#GRUB_BTRFS_SUBVOLUME_SORT="+ogen,-gen,path,rootid"
+
+# Show snapshots found during run "grub-mkconfig"
+# Default: "true"
+#GRUB_BTRFS_SHOW_SNAPSHOTS_FOUND="false"
+
+# Show Total of snapshots found during run "grub-mkconfig"
+# Default: "true"
+#GRUB_BTRFS_SHOW_TOTAL_SNAPSHOTS_FOUND="true"
+
+# By default, "grub-btrfs" automatically detects most existing kernels.
+# If you have one or more custom kernels, you can add them here.
+# Default: ("")
+#GRUB_BTRFS_NKERNEL=("kernel-custom" "vmlinux-custom")
+
+# By default, "grub-btrfs" automatically detects most existing initramfs.
+# If you have one or more custom initramfs, you can add them here.
+# Default: ("")
+#GRUB_BTRFS_NINIT=("initramfs-custom.img" "initrd-custom.img" "otherinit-custom.gz")
+
+# By default, "grub-btrfs" automatically detects most existing microcodes.
+# If you have one or more custom microcodes, you can add them here.
+# Default: ("")
+#GRUB_BTRFS_CUSTOM_MICROCODE=("custom-ucode.img" "custom-uc.img "custom_ucode.cpio")
+
+# Comma seperated mount options to be used when booting a snapshot.
+# They can be defined here as well as in the "/" line inside the respective snapshots'
+# "/etc/fstab" files.  Mount options found in both places are combined, and this variable
+# takes priority over `fstab` entries.
+# NB: Do NOT include "subvol=..." or "subvolid=..." here.
+# Default: ""
+#GRUB_BTRFS_ROOTFLAGS="space_cache,commit=10,norecovery"
+
+# Ignore specific path during run "grub-mkconfig".
+# Only exact paths are ignored.
+# e.g : if `specific path` = @, only `@` snapshot will be ignored.
+# Default: ("@")
+GRUB_BTRFS_IGNORE_SPECIFIC_PATH=("@")
+
+# Ignore prefix path during run "grub-mkconfig".
+# Any path starting with the specified string will be ignored.
+# e.g : if `prefix path` = @, all snapshots beginning with "@/..." will be ignored.
+# Default: ("var/lib/docker" "@var/lib/docker" "@/var/lib/docker")
+GRUB_BTRFS_IGNORE_PREFIX_PATH=("var/lib/docker" "@var/lib/docker" "@/var/lib/docker")
+
+# Ignore specific type of snapper's snapshot during run "grub-mkconfig".
+# Type = single, pre, post.
+# Default: ("")
+GRUB_BTRFS_IGNORE_SNAPPER_TYPE=("")
+
+# Ignore specific description of snapper's snapshot during run "grub-mkconfig".
+# Default: ("")
+GRUB_BTRFS_IGNORE_SNAPPER_DESCRIPTION=("")
+
+# By default "grub-btrfs" automatically detects your boot partition,
+# either located at the system root or on a separate partition,
+# but cannot detect if it is in a subvolume.
+# Change to "true" if you have a boot partition in a different subvolume.
+# Default: "false"
+#GRUB_BTRFS_OVERRIDE_BOOT_PARTITION_DETECTION="true"
+
+# Location of the folder containing the "grub.cfg" file.
+# Use by grub-btrfs to save the file "grub-btrfs.cfg".
+# Might be grub2 on some systems.
+# For example, on Fedora with EFI : "/boot/efi/EFI/fedora"
+# Default: "/boot/grub"
+#GRUB_BTRFS_GRUB_DIRNAME="/boot/grub2"
+
+# Location of kernels/initramfs/microcode.
+# Use by "grub-btrfs" to detect the boot partition and the location of kernels/initrafms/microcodes.
+# Default: "/boot"
+#GRUB_BTRFS_BOOT_DIRNAME="/boot"
+
+# Name/path of grub-mkconfig command, use by "grub-btrfs.service"
+# Might be 'grub2-mkconfig' on some systems (Fedora ...)
+# Default paths are /sbin:/bin:/usr/sbin:/usr/bin,
+# if your path is missing, report it on the upstream project.
+# For example, on Fedora : "/sbin/grub2-mkconfig"
+# You can use only name or full path.
+# Default: grub-mkconfig
+#GRUB_BTRFS_MKCONFIG=/usr/bin/grub2-mkconfig
+
+# Snapper
+# Snapper's config name to use
+# Default: "root"
+#GRUB_BTRFS_SNAPPER_CONFIG="root"
+
+# Password protection management for submenu,snapshots
+# Refer to the Grub documentation https://www.gnu.org/software/grub/manual/grub/grub.html#Authentication-and-authorisation
+# and this comment https://github.com/Antynea/grub-btrfs/issues/95#issuecomment-682295660
+#
+# Add authorized usernames separate by comma (foo,bar)
+# When Grub's password protection is enabled, the superuser is authorized by default, it isn't necessary to add it
+# Default: ""
+#GRUB_BTRFS_PROTECTION_AUTHORIZED_USERS="foo,bar"
+#
+# Disable authentication support for submenu of Grub-btrfs only (--unrestricted)
+# doesn't work if GRUB_BTRFS_PROTECTION_AUTHORIZED_USERS isn't empty
+# Default: "false"
+#GRUB_BTRFS_DISABLE_PROTECTION_SUBMENU="true"
