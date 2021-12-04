@@ -61,3 +61,4 @@ usbmux:x:140:
 autologin:x:1000:zfogg
 zfogg:x:1001:
 sudo:x:1002:zfogg
+postgres:x:965:
