@@ -1,9 +1,10 @@
 ##
-## Manjaro Linux default mirrorlist
-## Generated on 2021-12-03 13:58
+## Manjaro Linux custom mirrorlist
+## Generated on 2022-02-03 11:16
 ##
-## Please use 'pacman-mirrors -f [NUMBER] [NUMBER]' to modify mirrorlist
-## (Use 0 for all mirrors)
+## Please use 'pacman-mirrors -id' To reset custom mirrorlist
+## Please use 'pacman-mirrors -c all' To reset custom mirrorlist
+## To remove custom config run  'pacman-mirrors -c all'
 ##
 
 ## Country : United_States
@@ -13,14 +14,14 @@ Server = https://mirrors.gigenet.com/manjaro/stable/$repo/$arch
 Server = https://mirror.math.princeton.edu/pub/manjaro/stable/$repo/$arch
 
 ## Country : United_States
-Server = https://repo.ialab.dsu.edu/manjaro/stable/$repo/$arch
+Server = https://mirror.clarkson.edu/manjaro/stable/$repo/$arch
 
 ## Country : United_States
-Server = https://mirrors.ocf.berkeley.edu/manjaro/stable/$repo/$arch
+Server = https://repo.ialab.dsu.edu/manjaro/stable/$repo/$arch
 
 ## Country : United_States
 Server = https://mirrors.sonic.net/manjaro/stable/$repo/$arch
 
 ## Country : United_States
-Server = https://mirror.clarkson.edu/manjaro/stable/$repo/$arch
+Server = https://mirrors.ocf.berkeley.edu/manjaro/stable/$repo/$arch
 
