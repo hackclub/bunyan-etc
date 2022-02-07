@@ -79,5 +79,4 @@
   <!-- <policy domain="system" name="shred" value="2"/> -->
   <!-- <policy domain="system" name="precision" value="6"/> -->
   <!-- <policy domain="system" name="font" value="/path/to/unicode-font.ttf"/> -->
-  <policy domain="delegate" rights="none" pattern="gs" />
 </policymap>

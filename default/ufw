@@ -34,13 +34,14 @@ MANAGE_BUILTINS=no
 # only enable if using iptables backend
 IPT_SYSCTL=/etc/ufw/sysctl.conf
 
-# Extra connection tracking modules to load. Complete list can be found in
-# net/netfilter/Kconfig of your kernel source. Some common modules:
+# Extra connection tracking modules to load. IPT_MODULES should typically be
+# empty for new installations and modules added only as needed. See
+# 'CONNECTION HELPERS' from 'man ufw-framework' for details. Complete list can
+# be found in net/netfilter/Kconfig of your kernel source. Some common modules:
 # nf_conntrack_irc, nf_nat_irc: DCC (Direct Client to Client) support
 # nf_conntrack_netbios_ns: NetBIOS (samba) client support
 # nf_conntrack_pptp, nf_nat_pptp: PPTP over stateful firewall/NAT
 # nf_conntrack_ftp, nf_nat_ftp: active FTP support
 # nf_conntrack_tftp, nf_nat_tftp: TFTP support (server side)
 # nf_conntrack_sane: sane support
-IPT_MODULES="nf_conntrack_ftp nf_nat_ftp nf_conntrack_netbios_ns"
-
+IPT_MODULES=""

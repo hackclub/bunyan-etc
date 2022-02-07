@@ -1,5 +1,5 @@
 #@ /etc/mail.rc
-#@ Configuration file for Mail v14.9.22.
+#@ Configuration file for Mail v14.9.23.
 #@ The syntax of this file is interpreted as follows:
 #@ - Any leading and trailing whitespace (space, tabulator, newline: " \t\n"),
 #@   and all members of (the internal variable) *ifs-ws* are removed.
@@ -10,7 +10,7 @@
 #@   removed, but trailing whitespace before "escaped newlines" is not.
 #@ - The number sign # is the comment-command and causes the (joined) line
 #@   (content) to be ignored.
-#@ S-nail v14.9.22 / 2021-02-24
+#@ S-nail v14.9.23 / 2021-11-11
 
 ## Variables
 
