@@ -63,3 +63,4 @@ zfogg:x:1001:
 sudo:x:1002:zfogg
 postgres:x:965:
 cloudflared:x:964:
+docker:x:963:

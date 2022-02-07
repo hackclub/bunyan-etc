@@ -1,0 +1,4 @@
+proxy-dns: false
+hostname: bunyan.fogg.dev
+url: http://localhost:3002
+credentials-file: /usr/local/etc/cloudflared/fogg.dev.pem
