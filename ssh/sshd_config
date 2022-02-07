@@ -81,8 +81,8 @@ KbdInteractiveAuthentication no
 # and KbdInteractiveAuthentication to 'no'.
 UsePAM yes
 
-#AllowAgentForwarding yes
-#AllowTcpForwarding yes
+AllowAgentForwarding yes
+AllowTcpForwarding yes
 #GatewayPorts no
 #X11Forwarding no
 #X11DisplayOffset 10
@@ -90,7 +90,7 @@ UsePAM yes
 #PermitTTY yes
 PrintMotd no # pam does that
 #PrintLastLog yes
-#TCPKeepAlive yes
+TCPKeepAlive yes
 #PermitUserEnvironment no
 #Compression delayed
 #ClientAliveInterval 0
@@ -114,3 +114,7 @@ Subsystem	sftp	/usr/lib/ssh/sftp-server
 #	AllowTcpForwarding no
 #	PermitTTY no
 #	ForceCommand cvs server
+
+
+# INFO: bunyan stuff by @zfogg
+AcceptEnv TERM_PROGRAM
