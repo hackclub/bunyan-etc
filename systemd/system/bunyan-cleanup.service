@@ -1,1 +1,1 @@
-/opt/bunyan/bunyan-cleanup.service
+/opt/bunyan/systemd/system/bunyan-cleanup.service
