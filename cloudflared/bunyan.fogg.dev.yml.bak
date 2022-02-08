@@ -1,0 +1,3 @@
+url: http://localhost:3002
+tunnel: a844e067-811f-4aca-a1d2-de06467a7907
+credentials-file: /usr/local/etc/cloudflared/bunyan.fogg.dev.json
